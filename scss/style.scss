@@ -1,0 +1,461 @@
+@use 'colors.scss' as *;
+@use 'typography.scss';
+@use 'responsive.scss' as *;
+
+$max-width: 1000px;
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $bg;
+  padding-top: 1em;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:visited {
+    color: $blue;
+  }
+}
+
+button {
+  border: 0;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+
+// HEADER
+header {
+  @include container();
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 4rem;
+
+  @include breakpoints(medium) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.logo img {
+  float: left;
+  clear: both;
+
+  @include breakpoints(xxsmall) {
+    // float: none;
+    // margin: 1rem auto;
+    // display: block;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.25em;
+  color: $blue;
+  margin: 0;
+  margin-left: 1.75em;
+  line-height: 50px;
+
+  @include breakpoints(medium) {
+    padding-bottom: 1rem;
+  }
+  @include breakpoints(xxsmall) {
+    // margin: 0;
+    // text-align: center;
+    font-size: 1.5rem;
+    line-height: 35px;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  line-height: 50px;
+  @include breakpoints(xxsmall) {
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+    padding-left: 2em;
+    @include breakpoints(xxsmall) {
+      padding: .5em;
+    }
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+    font-size: 1.625em;
+
+    @include breakpoints(xxsmall) {
+      font-size: 1.25em;
+    }
+
+    &.highlight {
+        color: $white;
+      }
+  }
+
+  .highlight {
+    background: $green;
+    border-radius: 25px;
+    padding: 0 1em;
+    padding-top: 4px;
+    border: 2px solid $green;
+
+    &:hover {
+      background: transparent;
+      border: 2px solid $green;
+      color: $green;
+    }
+  }
+}
+
+
+// HERO BLOCK
+$hero-size: 400px;
+$hero-size-large: 350px;
+$hero-size-medium: 300px;
+$hero-size-small: 300px;
+.hero {
+  @include container();
+  display: grid;
+  grid-template-columns: auto $hero-size;
+  margin-bottom: 4rem;
+
+  @include breakpoints(large) {
+    grid-template-columns: auto $hero-size-large;
+  }
+  @include breakpoints(medium) {
+    grid-template-columns: auto $hero-size-medium;
+  }
+  @include breakpoints(small) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 4.5em;
+    color: $green;
+    font-weight: 600;
+    margin: 0;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+
+    @include breakpoints(large) {
+      font-size: 4em;
+    }
+    @include breakpoints(medium) {
+      font-size: 3.5em;
+    }
+    @include breakpoints(small) {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+}
+
+.call-to-action {
+  background: $red;
+  border-radius: 100%;
+  font-size: 4em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $hero-size;
+  border: 8px solid $red;
+  cursor: pointer;
+
+  @include breakpoints(large) {
+    height: $hero-size-large;
+    font-size: 3.5em;
+  }
+  @include breakpoints(medium) {
+    height: $hero-size-medium;
+    font-size: 3em;
+  }
+  @include breakpoints(small) {
+    display: none;
+  }
+
+  .arrow {
+    font-size: 8rem;
+    line-height: .75em;
+  }
+  
+  a {
+    color: $white;
+    text-decoration: none;
+    padding-top: 1em;
+  }
+
+  &:hover {
+    background: transparent;
+
+    a {
+      color: $red;
+    }
+  }
+}
+
+
+// HEADER BLOCK
+h3 {
+  background: $yellow;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 2em;
+  margin: 0;
+
+  &.red {
+    background: $red;
+  }
+
+  &.blue {
+    background: $darkBlue;
+  }
+}
+
+
+// ABOUT
+#about-section {
+  background: $darkBlue;
+  color: $white;
+  margin: 0;
+  padding: 2rem 0;
+
+  p {
+    @include container();
+    padding-top: 1em;
+  }
+}
+
+h4 {
+  @include container();
+  font-size: 3rem;
+  font-weight: 500;
+
+  .highlight {
+    color: $darkRed;
+  }
+}
+
+
+// PORTFOLIO
+#portfolio-section {
+  background: #333;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.portfolio-grid {
+  @include container();
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+
+  @include breakpoints(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include breakpoints(xsmall) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio-item {
+  background: $bg;
+  border-radius: 1em;
+
+  h5 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  p {
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin: .5rem;
+  }
+}
+
+
+// CONTACT
+#contact-section {
+  @include container();
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  @include breakpoints(small) {
+    grid-template-columns: 100%;
+  }
+
+  h5 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  button {
+    background: $red;
+    color: $white;
+    width: 100%;
+    font-weight: 600;
+    border: 0;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+form {
+  border: 4px solid $black;
+  // display: flex;
+  // flex-wrap: wrap;
+  margin-top: 2rem;
+  // align-items: flex-start;
+  margin-bottom: auto;
+  @include breakpoints(small) {
+    margin: 0;
+  }
+  
+  h5 {
+    width: 100%;
+    background: $black;
+    color: $white;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    #contact-section & {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    background: $black;
+    color: $white;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 1rem;
+    margin: 0;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+}
+
+textarea {
+  height: 10rem;
+}
+
+input, textarea {
+  display: block;
+  font-size: 1.5rem;
+  background: $yellow;
+  color: $black;
+  border: 0;
+  padding: 1.25rem 1rem;
+  width: 100%;
+  border:0;
+  border-top: 4px solid $yellow;
+  border-bottom: 4px solid $black;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $black;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $black;
+    border-bottom: 6px solid $black;
+  }
+
+  &:invalid:focus,
+  &:out-of-range:focus {
+    color: $red;
+  }
+}
+
+#url {
+  position: absolute;
+  left: -9999px;
+}
+
+
+// FOOTER
+footer {
+  background: $black;
+  padding: 1rem 0;
+  margin-top: 2rem;
+
+  p {
+    @include container();
+    color: $white;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+}
+
+
+// PAYMENT PAGE
+.payments {
+  @include container();
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  @include breakpoints(small) {
+    grid-template-columns: 1fr;
+  }
+  
+  form, #paypal-button-container {
+    box-sizing: border-box;
+    border-bottom: 0;
+    margin-bottom: 1rem;
+
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+}

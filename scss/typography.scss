@@ -1,0 +1,12 @@
+@use 'overpass.scss';
+
+$font: 'overpass', sans-serif;
+
+* {
+  font-family: $font;
+  font-weight: 500;
+}
+
+b {
+  font-weight: 600;
+}

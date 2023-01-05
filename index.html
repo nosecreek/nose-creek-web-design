@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Keywords"
+    content="website design, web design, web page design, calgary web design, calgary web designers, airdrie web designers, airdrie web design, Calgary, Airdrie, Crossfield, Carstairs, Alberta, web page designer" />
+  <meta name="Description"
+    content="Nose Creek Web Design provides website design services to Calgary, Airdrie, and surrounding areas. Mobile and responsive website design, WordPress, hosting, SEO, Google Maps. Build a vibrant online presence for your business." />
+
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Nose Creek Web Design - Calgary, Airdrie Website Creation</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" width="50" height="50" />
+      <h1>Nose Creek Web Design</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact" class="highlight">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Partnering with your business on the road to online success</h2>
+    <div class="call-to-action" onClick="document.location = document.location.toString().split('#')[0] + '#contact'">
+      <a href="#contact">Get Started Today<br /><span class="arrow">&rarr;</span></a>
+    </div>
+  </section>
+  <h3 id="about" class="yellow">About</h3>
+  <section id="about-section">
+    <h4>Quality, afforable <span class="highlight">web design</span> in Calgary, AB, Canada</h4>
+    <p><b>Nose Creek Web Design</b> has been designing custom websites for businesses in Calgary, Airdrie, and the surrounding areas since 2013. All of our websites are responsive and mobile-friendly. We would love to work with you to create a website that will showcase your business in the best way possible!</p>
+    <p>In addition, we can do updates, additions, and maintenance for existing sites. Whether you are looking for minor tweaks, periodic content updates, or a complete overhaul, we have a solution for you!</p>
+  </section>
+  <h3 id="portfolio" class="red">Portfolio</h3>
+  <section id="portfolio-section">
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <a href="https://moviemakers.ca/">
+          <h5>MovieMakers</h5>
+          <img src="img/mmakers.jpg" alt="MovieMakers Website Thumbnail" />
+          <p>Visit Site &rarr;</p>
+        </a>
+      </div>
+      <div class="portfolio-item">
+        <a href="https://harderhomes.ca/">
+          <h5>Harder Homes</h5>
+          <img src="img/harder.jpg" alt="Harder Homes Website Thumbnail" />
+          <p>Visit Site &rarr;</p>
+        </a>
+      </div>
+      <div class="portfolio-item">
+        <a href="https://asavonmoving.com/">
+          <h5>A-$AV-ON</h5>
+          <img src="img/asavon.jpg" alt="A-SAV-ON Website Thumbnail" />
+          <p>Visit Site &rarr;</p>
+        </a>
+      </div>
+      <div class="portfolio-item">
+        <a href="https://calgarycofc.com/">
+          <h5>Calgary C of C</h5>
+          <img src="img/ccofc.jpg" alt="Calgary Church of Christ Website Thumbnail" />
+          <p>Visit Site &rarr;</p>
+        </a>
+      </div>
+      <div class="portfolio-item">
+        <a href="https://grocerytracker.ca/">
+          <h5>Grocery Tracker</h5>
+          <img src="img/grocery.jpg" alt="Grocery Tracker Website Thumbnail" />
+          <p>Visit Site &rarr;</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <h3 id="contact" class="blue">Contact</h3>
+  <section id="contact-section">
+    <div id="contact-info">
+      <h5>Contact Information</h5>
+      <p>Phone: <a href="tel:403-370-2313">403-370-2313</a><br />Email: <a href="mailto:dustin@nosecreekweb.ca">dustin@nosecreekweb.ca</a></p>
+      <p>If you are contacting us because you are interested in having a website designed, please include as many relevant
+        details as possible, including: timeline, budget, and any desired site elements. If you are unsure about any of
+        these
+        things, don't worry - we will be happy to help you out.</p>
+      <p>If you would like work done on an existing site, please include the URL of your current site.</p>
+    </div>
+    <form action="">
+      <h5>Send Us a Message</h5>
+      <p id="contact-message">Sorry, this form requires JavaScript. Please send us an email at <a href="mailto:dustin@nosecreekweb.ca">dustin@nosecreekweb.ca</a> instead.</p>
+      <input type="text" id="name" name="name" placeholder="Your Name" />
+      <input type="email" id="email" name="email" placeholder="Your Email" />
+      <input type="tel" id="tel" name="tel" placeholder="Your Phone (optional)" pattern="(\d|-|\+|\.| )+" />
+      <input type="text" id="url" name="url" placeholder="Please leave me blank" aria-hidden="true" autocomplete="off" tabindex="-1" />
+      <textarea id="message" name="message" placeholder="Your Message"></textarea>
+      <button onClick="submitForm(event)">Submit</button>
+    </form>
+  </section>
+  <footer>
+    <p>
+      Copyright &copy; 2023 Nose Creek Web Design.
+      <span itemprop="telephone" class="contact-info">403-370-2313</span>. <span itemprop="address" itemscope
+        itemtype="http://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Calgary</span>,
+        <span itemprop="addressRegion">AB</span>,
+        <span itemprop="addressCountry">Canada</span>.
+      </span>
+    </p>
+    <p>
+      <a href="https://github.com/nosecreek">GitHub</a> &bull; <a href="payments.html">Make a Payment</a>
+    </p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@mixin breakpoints ($breakpoint) {
+  @if $breakpoint ==large {
+    @media only screen and (max-width: 1030px) {
+      @content;
+    }
+  }
+  
+  @if $breakpoint ==medium {
+    @media only screen and (max-width: 960px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==small {
+    @media only screen and (max-width: 815px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==xsmall {
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==xxsmall {
+    @media only screen and (max-width: 510px) {
+      @content;
+    }
+  }
+}
