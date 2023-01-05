@@ -487,8 +487,9 @@ input, textarea {
   padding: 1.25rem 1rem;
   width: 100%;
   border: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
-  -webkit-appearance: none;
+  -webkit-appearance: none imporant !important;
   appearance: none;
   border-top: 4px solid #baa873;
   border-bottom: 4px solid #333;
