@@ -420,6 +420,11 @@ input, textarea {
   }
 }
 
+input:-internal-autofill-selected, input:-webkit-autofill {
+  background: $yellow !important;
+  -webkit-box-shadow: 0 0 0 50px $yellow inset;
+}
+
 #url {
   position: absolute;
   left: -9999px;

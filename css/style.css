@@ -506,6 +506,11 @@ input:invalid:focus, input:out-of-range:focus, textarea:invalid:focus, textarea:
   color: #a7665b;
 }
 
+input:-internal-autofill-selected, input:-webkit-autofill {
+  background: #baa873 !important;
+  -webkit-box-shadow: 0 0 0 50px #baa873 inset;
+}
+
 #url {
   position: absolute;
   left: -9999px;
