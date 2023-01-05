@@ -398,6 +398,8 @@ input, textarea {
   width: 100%;
   border:0;
   border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
   border-top: 4px solid $yellow;
   border-bottom: 4px solid $black;
   box-sizing: border-box;
