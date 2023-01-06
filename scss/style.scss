@@ -126,6 +126,7 @@ nav ul {
     padding: 0 1em;
     padding-top: 4px;
     border: 2px solid $green;
+    transition: all .25s;
 
     &:hover {
       background: transparent;
@@ -192,6 +193,7 @@ $hero-size-small: 300px;
   height: $hero-size;
   border: 8px solid $red;
   cursor: pointer;
+  transition: all .25s;
 
   @include breakpoints(large) {
     height: $hero-size-large;
@@ -216,11 +218,35 @@ $hero-size-small: 300px;
     padding-top: 1em;
   }
 
+  .arrow {
+    position: relative;
+  }
+
   &:hover {
     background: transparent;
 
     a {
       color: $red;
+    }
+
+    .arrow {
+      animation: linear;
+      animation-name: moveArrow;
+      animation-duration: .75s;
+      
+      @keyframes moveArrow {
+        0% {
+          left: -20px;
+        }
+      
+        90% {
+          left: 5px;
+        }
+
+        100% {
+          left: 0;
+        }
+      }
     }
   }
 }

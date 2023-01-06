@@ -221,6 +221,7 @@ nav ul .highlight {
   padding: 0 1em;
   padding-top: 4px;
   border: 2px solid #38ad52;
+  transition: all 0.25s;
 }
 nav ul .highlight:hover {
   background: transparent;
@@ -290,6 +291,7 @@ nav ul .highlight:hover {
   height: 400px;
   border: 8px solid #a7665b;
   cursor: pointer;
+  transition: all 0.25s;
 }
 @media only screen and (max-width: 1030px) {
   .call-to-action {
@@ -317,11 +319,30 @@ nav ul .highlight:hover {
   text-decoration: none;
   padding-top: 1em;
 }
+.call-to-action .arrow {
+  position: relative;
+}
 .call-to-action:hover {
   background: transparent;
 }
 .call-to-action:hover a {
   color: #a7665b;
+}
+.call-to-action:hover .arrow {
+  animation: linear;
+  animation-name: moveArrow;
+  animation-duration: 0.75s;
+}
+@keyframes moveArrow {
+  0% {
+    left: -20px;
+  }
+  90% {
+    left: 5px;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 h3 {
