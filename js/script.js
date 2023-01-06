@@ -8,6 +8,9 @@ window.onload = () => {
       links[i].target = "_blank";
     }
   }
+
+  window.addEventListener("scroll", fadeIn);
+  fadeIn();
 };
 
 const submitForm = (event) => {
@@ -45,4 +48,18 @@ const submitForm = (event) => {
     document.location = document.location.toString().split("#")[0] + "#contact";
   });
   req.send(JSON.stringify(payload));
+};
+
+const fadeIn = () => {
+  const elements = document.querySelectorAll("p, div, form");
+  const windowHeight = window.innerHeight;
+  for (var i = 0; i < elements.length; i++) {
+    const elementTop = elements[i].getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 32) {
+      elements[i].style.opacity = 100;
+    } else {
+      elements[i].style.opacity = 0;
+    }
+  }
 };

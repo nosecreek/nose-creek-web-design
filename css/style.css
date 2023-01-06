@@ -103,6 +103,12 @@ b {
   font-weight: 600;
 }
 
+p,
+div,
+form {
+  transition: opacity 2s;
+}
+
 html {
   scroll-behavior: smooth;
 }

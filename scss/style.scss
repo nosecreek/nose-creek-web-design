@@ -9,6 +9,12 @@ $max-width: 1000px;
   padding: 0 2rem;
 }
 
+p,
+div,
+form {
+  transition: opacity 2s;
+}
+
 html {
   scroll-behavior: smooth;
 }
