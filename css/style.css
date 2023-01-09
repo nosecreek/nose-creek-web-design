@@ -222,17 +222,17 @@ nav ul a.highlight {
   color: #fff;
 }
 nav ul .highlight {
-  background: #38ad52;
+  background: #35a44d;
   border-radius: 25px;
   padding: 0 1em;
   padding-top: 4px;
-  border: 2px solid #38ad52;
+  border: 2px solid #35a44d;
   transition: all 0.25s;
 }
 nav ul .highlight:hover {
   background: transparent;
-  border: 2px solid #38ad52;
-  color: #38ad52;
+  border: 2px solid #35a44d;
+  color: #35a44d;
 }
 
 .hero {
@@ -262,7 +262,7 @@ nav ul .highlight:hover {
 }
 .hero h2 {
   font-size: 4.5em;
-  color: #38ad52;
+  color: #35a44d;
   font-weight: 600;
   margin: 0;
   margin-right: 2rem;
@@ -353,7 +353,7 @@ nav ul .highlight:hover {
 
 h3 {
   background: #baa873;
-  color: #fff;
+  color: #333;
   text-transform: uppercase;
   text-align: center;
   font-size: 3rem;
@@ -363,13 +363,15 @@ h3 {
 }
 h3.red {
   background: #a7665b;
+  color: #fff;
 }
 h3.blue {
-  background: #4677a0;
+  background: #416F95;
+  color: #fff;
 }
 
 #about-section {
-  background: #4677a0;
+  background: #416F95;
   color: #fff;
   margin: 0;
   padding: 2rem 0;
@@ -389,7 +391,7 @@ h4 {
   font-weight: 500;
 }
 h4 .highlight {
-  color: #53322d;
+  color: #D1C29F;
 }
 
 #portfolio-section {
@@ -556,6 +558,9 @@ footer p {
   color: #fff;
   text-align: center;
   font-size: 1.25rem;
+}
+footer a, footer a:visited {
+  color: #759FC2;
 }
 
 .payments {

@@ -261,7 +261,7 @@ $hero-size-small: 300px;
 // HEADER BLOCK
 h3 {
   background: $yellow;
-  color: $white;
+  color: $black;
   text-transform: uppercase;
   text-align: center;
   font-size: 3rem;
@@ -271,10 +271,12 @@ h3 {
 
   &.red {
     background: $red;
+    color: $white;
   }
 
   &.blue {
     background: $darkBlue;
+    color: $white;
   }
 }
 
@@ -298,7 +300,7 @@ h4 {
   font-weight: 500;
 
   .highlight {
-    color: $darkRed;
+    color: $lightYellow;
   }
 }
 
@@ -475,6 +477,10 @@ footer {
     color: $white;
     text-align: center;
     font-size: 1.25rem;
+  }
+
+  a, a:visited {
+    color: $lightBlue;
   }
 }
 
