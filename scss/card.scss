@@ -1,0 +1,195 @@
+@use 'colors.scss' as *;
+@use 'style.scss' as *;
+@use 'responsive.scss' as *;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  header {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo {
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: 3rem;
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    @include breakpoints(xxsmall) {
+      font-size: 2rem;
+    }
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
+
+.card {
+  @include container();
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+  padding-bottom: 2rem;
+
+  a {
+    font-size: 2rem;
+
+    @include breakpoints(small) {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include breakpoints(large) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+a.nosecreek {
+  background: $green;
+  color: $white;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  transition: all .25s;
+  border: 4px solid $green;
+
+  &:hover {
+    color: $green;
+    background: transparent;
+  }
+}
+
+a.portfolio {
+  background: $yellow;
+  width: 75%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  transform: rotate(45deg);
+  margin-top: 12.5%;
+  margin-left: 12.5%;
+  position: relative;
+  top: -3.125%;
+  transition: all .25s;
+
+  &:hover {
+    transform: rotate(90deg);
+
+    .content {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .content {
+      color: $black;
+      height: 100%;
+      transform: rotate(-45deg);
+      vertical-align: middle;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: all .25s;
+    }
+}
+
+a.linkedin {
+  background: $blue;
+  color: $white;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all .25s;
+  border: 4px solid $blue;
+
+  &:hover {
+    color: $blue;
+    background: transparent;
+  }
+}
+
+a.github {
+  aspect-ratio: 0.645 / 1;
+  background: $red;
+  border-radius: 11%;
+  width: 60.5%;
+  position: relative;
+  margin-left: 19.75%;
+  margin-top: 2%;
+  transition: all .25s;
+
+  &:hover {
+    transform: rotate(30deg);
+
+    .content {
+      transform: rotate(-30deg);
+    }
+  }
+
+  .content {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    transition: all .25s;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: inherit;
+    border-radius: inherit;
+  }
+
+  &:before {
+    transform: rotate(60deg);
+  }
+
+  &:after {
+    transform: rotate(-60deg);
+  }
+}
+
+@include breakpoints(small) {
+  a .content.small {
+    display: flex !important;
+  }
+  a .content.medium {
+    display: none;
+  }
+}
+
+a .content.small {
+  display: none;
+}
