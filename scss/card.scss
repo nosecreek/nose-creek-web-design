@@ -27,6 +27,10 @@ body {
       font-size: 2rem;
     }
   }
+
+  footer {
+    margin-top: 0;
+  }
 }
 
 .card {
@@ -34,10 +38,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 2rem;
-  row-gap: 2rem;
+  row-gap: 4rem;
   align-items: center;
   flex-grow: 1;
   overflow: hidden;
+  padding-bottom: 2rem;
 
   a {
     font-size: 2rem;
@@ -63,6 +68,13 @@ a.nosecreek {
   text-align: center;
   box-sizing: border-box;
   padding: 0 1rem;
+  transition: all .25s;
+  border: 4px solid $green;
+
+  &:hover {
+    color: $green;
+    background: transparent;
+  }
 }
 
 a.portfolio {
@@ -75,9 +87,18 @@ a.portfolio {
   margin-left: 12.5%;
   position: relative;
   top: -3.125%;
+  transition: all .25s;
+
+  &:hover {
+    transform: rotate(90deg);
+
+    .content {
+      transform: rotate(-90deg);
+    }
+  }
 
   .content {
-      color: #333;
+      color: $black;
       height: 100%;
       transform: rotate(-45deg);
       vertical-align: middle;
@@ -86,17 +107,25 @@ a.portfolio {
       align-items: center;
       justify-content: center;
       text-align: center;
+      transition: all .25s;
     }
 }
 
 a.linkedin {
   background: $blue;
-  color: $black;
+  color: $white;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: all .25s;
+  border: 4px solid $blue;
+
+  &:hover {
+    color: $blue;
+    background: transparent;
+  }
 }
 
 a.github {
@@ -107,6 +136,15 @@ a.github {
   position: relative;
   margin-left: 19.75%;
   margin-top: 2%;
+  transition: all .25s;
+
+  &:hover {
+    transform: rotate(30deg);
+
+    .content {
+      transform: rotate(-30deg);
+    }
+  }
 
   .content {
     position: absolute;
@@ -118,6 +156,7 @@ a.github {
     justify-content: center;
     text-align: center;
     color: $white;
+    transition: all .25s;
   }
 
   &:before,

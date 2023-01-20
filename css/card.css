@@ -611,6 +611,9 @@ body h2 {
     font-size: 2rem;
   }
 }
+body footer {
+  margin-top: 0;
+}
 
 .card {
   max-width: 1000px;
@@ -619,10 +622,11 @@ body h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 2rem;
-  row-gap: 2rem;
+  row-gap: 4rem;
   align-items: center;
   flex-grow: 1;
   overflow: hidden;
+  padding-bottom: 2rem;
 }
 .card a {
   font-size: 2rem;
@@ -649,6 +653,12 @@ a.nosecreek {
   text-align: center;
   box-sizing: border-box;
   padding: 0 1rem;
+  transition: all 0.25s;
+  border: 4px solid #35a44d;
+}
+a.nosecreek:hover {
+  color: #35a44d;
+  background: transparent;
 }
 
 a.portfolio {
@@ -661,6 +671,13 @@ a.portfolio {
   margin-left: 12.5%;
   position: relative;
   top: -3.125%;
+  transition: all 0.25s;
+}
+a.portfolio:hover {
+  transform: rotate(90deg);
+}
+a.portfolio:hover .content {
+  transform: rotate(-90deg);
 }
 a.portfolio .content {
   color: #333;
@@ -672,16 +689,23 @@ a.portfolio .content {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: all 0.25s;
 }
 
 a.linkedin {
   background: #5f91b9;
-  color: #333;
+  color: #fff;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: all 0.25s;
+  border: 4px solid #5f91b9;
+}
+a.linkedin:hover {
+  color: #5f91b9;
+  background: transparent;
 }
 
 a.github {
@@ -692,6 +716,13 @@ a.github {
   position: relative;
   margin-left: 19.75%;
   margin-top: 2%;
+  transition: all 0.25s;
+}
+a.github:hover {
+  transform: rotate(30deg);
+}
+a.github:hover .content {
+  transform: rotate(-30deg);
 }
 a.github .content {
   position: absolute;
@@ -703,6 +734,7 @@ a.github .content {
   justify-content: center;
   text-align: center;
   color: #fff;
+  transition: all 0.25s;
 }
 a.github:before, a.github:after {
   content: "";
