@@ -193,3 +193,13 @@ a.github {
 a .content.small {
   display: none;
 }
+
+.featured-project {
+  grid-column: span 4;
+  text-align: center;
+  align-self: start;
+
+  @include breakpoints(large) {
+    grid-column: span 2;
+  }
+}

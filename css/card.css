@@ -766,4 +766,15 @@ a .content.small {
   display: none;
 }
 
+.featured-project {
+  grid-column: span 4;
+  text-align: center;
+  align-self: start;
+}
+@media only screen and (max-width: 1030px) {
+  .featured-project {
+    grid-column: span 2;
+  }
+}
+
 /*# sourceMappingURL=card.css.map */
